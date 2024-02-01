@@ -229,8 +229,17 @@ class _fifthState extends State<fifth> {
                       colors: [ar[pos5],ar[pos5]],
                     ),
                   ),
-                  child: (emoji_style==false)?SingleChildScrollView(child: Text("${emoji[emoji_index]}${widget.pos1[widget.index]}${emoji[emoji_index]}",style: TextStyle(fontSize: (font_size==false)?15:pos7,fontWeight: (font_status==false)?FontWeight.bold:weight[pos4],color: pos6,),)):
-                  SingleChildScrollView(child: Text("${widget.pos1[widget.index]}",style: TextStyle(fontSize: (font_size==false)?15:pos7,fontWeight: (font_status==false)?FontWeight.bold:weight[pos4],color: pos6,),)),
+                  child: (emoji_style==false)?
+                  SingleChildScrollView(child: Text("${emoji[emoji_index]}${widget.pos1[widget.index]}${emoji[emoji_index]}",
+                    style: TextStyle(
+                      fontSize: (font_size==false)?15:pos7,
+                      fontWeight: (font_status==false)?FontWeight.bold:weight[pos4],
+                      color: pos6,),)):
+                  SingleChildScrollView(child: Text("${widget.pos1[widget.index]}",
+                    style: TextStyle(
+                      fontSize: (font_size==false)?15:pos7,
+                      fontWeight: (font_status==false)?FontWeight.bold:weight[pos4],
+                      color: pos6,),)),
                 ),
               ), controller: control),
           ),
@@ -301,7 +310,7 @@ class _fifthState extends State<fifth> {
                                                 // ar.shuffle();
                                                 pos5 = index;
                                                 print(pos5);
-                                                color_status = false;
+                                                color_status = true;
                                                 setState(() {});
                                               },
                                                 child: Container(
